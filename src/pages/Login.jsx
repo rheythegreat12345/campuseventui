@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
-import { Lock, User, LogIn } from 'lucide-react'
+import { Lock, User, LogIn, ArrowLeft } from 'lucide-react'
 import styles from './Login.module.css'
 
 export default function Login() {
@@ -22,6 +22,23 @@ export default function Login() {
   return (
     <div className={styles.page}>
       <div className={styles.card}>
+        <button
+          onClick={() => navigate('/home')}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 6,
+            background: 'none',
+            color: 'var(--text2)',
+            fontSize: 13,
+            marginBottom: 16,
+            padding: '4px 0',
+            cursor: 'pointer',
+          }}
+        >
+          <ArrowLeft size={15} /> Back to Home
+        </button>
+
         <div className={styles.logo}>
           <div className={styles.logoIcon}>⚡</div>
           <div className={styles.logoText}>
