@@ -1,0 +1,90 @@
+.page { display: flex; flex-direction: column; gap: 28px; max-width: 700px; }
+.header {}
+.title { font-size: 28px; font-weight: 800; color: var(--text); }
+.sub { font-size: 13px; color: var(--text3); margin-top: 6px; }
+
+.form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.row > * { min-width: 160px; }
+
+.input {
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--text);
+  font-size: 13px;
+  transition: border-color 0.2s;
+}
+.input:focus { border-color: var(--accent); }
+.input::placeholder { color: var(--text3); }
+.inputError { border-color: var(--danger) !important; }
+.textarea { resize: vertical; min-height: 90px; }
+
+select.input option { background: var(--bg2); }
+
+.colors {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.colorBtn {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.colorBtn:hover { transform: scale(1.15); }
+.colorSelected { border-color: white; box-shadow: 0 0 0 3px rgba(255,255,255,0.2); transform: scale(1.1); }
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.cancelBtn {
+  background: var(--bg3); color: var(--text2);
+  border: 1px solid var(--border);
+  padding: 10px 22px; border-radius: 8px;
+  font-size: 13px; font-weight: 600;
+  transition: all 0.2s;
+}
+.cancelBtn:hover { color: var(--text); }
+.submitBtn {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  padding: 10px 22px; border-radius: 8px;
+  font-size: 13px; font-weight: 600;
+  transition: all 0.2s;
+}
+.submitBtn:hover { background: #2563eb; transform: translateY(-1px); }
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 300px;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+.success h2 { font-size: 24px; font-weight: 800; color: var(--text); }
+.success p { font-size: 13px; color: var(--text3); }
