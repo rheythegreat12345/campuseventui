@@ -38,7 +38,7 @@ export default function App() {
           <Suspense fallback={<PageLoader />}>
             <Routes>
               {/* Landing & Login - no layout */}
-              <Route path="/" element={<Landing />} />
+<Route path="/" element={<Navigate to="/home" replace />} />
               <Route path="/login" element={<Login />} />
 
               {/* Public pages - sidebar: Home + Events only */}
