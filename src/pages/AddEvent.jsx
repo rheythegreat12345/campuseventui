@@ -39,14 +39,14 @@ export default function AddEvent() {
     if (Object.keys(e).length) { setErrors(e); return }
     addEvent({ ...form, capacity: Number(form.capacity) })
     setSuccess(true)
-    setTimeout(() => navigate('/events'), 1800)
+    setTimeout(() => navigate('/admin/dashboard'), 1800)
   }
 
   if (success) return (
     <div className={styles.success}>
       <CheckCircle size={52} color="var(--accent3)" />
       <h2>Event Added!</h2>
-      <p>Redirecting to Events...</p>
+      <p>Redirecting to Dashboard...</p>
     </div>
   )
 
@@ -118,7 +118,7 @@ export default function AddEvent() {
         </Field>
 
         <div className={styles.formActions}>
-          <button className={styles.cancelBtn} onClick={() => navigate('/events')}>Cancel</button>
+          <button className={styles.cancelBtn} onClick={() => navigate('/admin/dashboard')}>Cancel</button>
           <button className={styles.submitBtn} onClick={handleSubmit}>
             <PlusCircle size={16} /> Add Event
           </button>
